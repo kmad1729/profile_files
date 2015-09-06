@@ -6,8 +6,28 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set softtabstop=4
+filetype on
+filetype plugin on
+filetype indent on
 
 "setting job file syntax highlighting
 autocmd BufRead,BufNewFile *.tcl,*.job set filetype=tcl
+"for py2 and py3
+autocmd BufRead,BufNewFile *.py2,*.py3 set filetype=python
+
+"pathogen installation
+"execute pathogen#infect()
+
+"remove bell
+set noerrorbells
+set novisualbell
 
 
+"nerdree commands
+"autocmd vimenter * NERDTree
+"autocmd vimenter * if !argc() | NERDTree | endif
+"map <C-n> :NERDTreeToggle<CR>
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"for makefile
+autocmd Filetype make set noexpandtab shiftwidth=8 softtabstop=0
