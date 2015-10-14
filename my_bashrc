@@ -1,0 +1,11 @@
+
+alias l="ls"
+
+#PS1 prompt
+#Old PS1
+#export PS1='\h:\W \u\$'
+#new PS1
+export PS1='\W \$ '
+
+figlet "Hello, KMad"
+
